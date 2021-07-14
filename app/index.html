@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Todo List</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <h1 class="main-title">Todo</h1><img id="toggle-mode" src="img/icon-sun.svg" alt="Change application theme icon">
+    </header>
+    <main class="main">
+      <form class="form form--new-todo" id="new-todo-form">
+        <div class="form__field form__field--no-border-bottom">
+          <input class="form__checkbox" id="add-new-todo-checkbox" type="checkbox" name="add-new-todo-checkbox">
+          <label class="form__checkbox-label" for="add-new-todo-checkbox"></label>
+          <input class="form__input" id="add-new-todo" type="text" name="add-new-todo" placeholder="Add new todo">
+        </div>
+      </form>
+      <div class="panel">
+        <form class="form form--todo-list" id="todo-list-form">
+          <ul class="todo-list" id="todo-list"></ul>
+          <ul id="done-list"></ul>
+        </form>
+        <div class="filter">
+          <p class="filter__items-left" id="items-left">5 items left</p>
+          <ul class="filter__filter-list filter-list" id="filter-list">
+            <li class="filter-list__item">
+              <button class="filter__button filter__button--active" id="filter-all">All</button>
+            </li>
+            <li class="filter-list__item">
+              <button class="filter__button" id="filter-active">Active</button>
+            </li>
+            <li class="filter-list__item">
+              <button class="filter__button" id="filter-completed">Completed</button>
+            </li>
+          </ul>
+          <p class="filter__clear" id="clear-completed">Clear completed</p>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+    <script src="javascript/main-dist.js"></script>
+  </body>
+</html>
